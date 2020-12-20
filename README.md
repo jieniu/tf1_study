@@ -8,3 +8,4 @@ tensorflow1.x study code
 3. [tensorflow1 placeholder](src/03_placeholder.py)
 4. [实现一个全连接层](src/04_full_connected_layer.py)
 5. [使用tensorflow1构造神经网络](src/05_nn.py)
+6. [可视化拟合情况](src/06_visualize_result.py)
