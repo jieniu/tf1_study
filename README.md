@@ -10,3 +10,4 @@ tensorflow1.x study code
 5. [使用tensorflow1构造神经网络](src/05_nn.py)
 6. [可视化合情况](src/06_visualize_result.py)
 7. [使用tensorboard画网络结构和统计信息](src/07_tensorboard.py)
+8. [在mnist数据集上做手写数字识别分类](src/08_mnist_classification.py)
