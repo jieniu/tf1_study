@@ -8,7 +8,7 @@ def add_layer(inputs, in_size, out_size, activation_function=None):
     - out_size: 输出特征数
     - activation_function: 激活函数
     """
-    Weights = tf.Variable(tf.random_normal([in_size, out_size]))
+    Weights = tf.Variable(tf.truncated_normal([in_size, out_size], stddev=0.1))
     biases = tf.Variable(tf.zeros([1, out_size]) + 0.1)
     Wx_plus_b = tf.matmul(inputs, Weights) + biases
     if not activation_function:

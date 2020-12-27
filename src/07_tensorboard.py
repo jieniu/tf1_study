@@ -25,7 +25,7 @@ def add_layer(inputs, in_size, out_size, layer_no, activation_function=None):
     """
     with tf.name_scope("layer_{}".format(layer_no)):
         with tf.name_scope("weights"):
-            Weights = tf.Variable(tf.random_normal([in_size, out_size]),
+            Weights = tf.Variable(tf.truncated_normal([in_size, out_size], stddev=0.1),
                                   name="w")
             variable_summaries(Weights)
         with tf.name_scope("biases"):

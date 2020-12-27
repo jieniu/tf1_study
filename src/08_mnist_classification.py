@@ -10,7 +10,7 @@ n_batch = mnist.train.num_examples // batch_size
 x = tf.placeholder(tf.float32, [None, 784]) # 特征形状 n*784
 y = tf.placeholder(tf.float32, [None, 10]) # 样本形状 n*10
 
-def add_layer(inputs, in_size, out_size, activation_function=None, init_function=tf.random_normal):
+def add_layer(inputs, in_size, out_size, activation_function=None):
     """
     增加全连接层，返回一个 batch_size * out_size 的矩阵
     - inputs: 输入矩阵，形状 batch_size * in_size
@@ -19,7 +19,7 @@ def add_layer(inputs, in_size, out_size, activation_function=None, init_function
     - activation_function: 激活函数
     - init_function: 参数的初始化方法
     """
-    Weights = tf.Variable(init_function([in_size, out_size]))
+    Weights = tf.Variable(tf.truncated_normal([in_size, out_size], stddev=0.1))
     biases = tf.Variable(tf.zeros([1, out_size]))
     Wx_plus_b = tf.matmul(inputs, Weights) + biases
     if not activation_function:
@@ -27,8 +27,7 @@ def add_layer(inputs, in_size, out_size, activation_function=None, init_function
     else:
         return activation_function(Wx_plus_b)
 
-# 在tf1.12环境下，使用tf.zeros初始化参数得到的结果会更好
-prediction = add_layer(x, 784, 10, tf.nn.softmax, init_function=tf.zeros)
+prediction = add_layer(x, 784, 10, tf.nn.softmax)
 # 代价函数
 loss = tf.reduce_mean(tf.nn.weighted_cross_entropy_with_logits(y, prediction, 1))
 #loss = tf.reduce_mean(tf.nn.sigmoid_cross_entropy_with_logits(logits=prediction, labels=y))
