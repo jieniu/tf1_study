@@ -12,3 +12,4 @@ tensorflow1.x study code
 7. [使用tensorboard画网络结构和统计信息](src/07_tensorboard.py)
 8. [在mnist数据集上做手写数字识别分类](src/08_mnist_classification.py)
 9. [使用dropout来控制模型的过拟合](src/09_dropout.py)
+10. [使用cnn来做手写数字识别分类](src/10_cnn_mnist.py)
