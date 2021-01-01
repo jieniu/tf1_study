@@ -13,3 +13,4 @@ tensorflow1.x study code
 8. [在mnist数据集上做手写数字识别分类](src/08_mnist_classification.py)
 9. [使用dropout来控制模型的过拟合](src/09_dropout.py)
 10. [使用cnn来做手写数字识别分类](src/10_cnn_mnist.py)
+11. [保存和恢复参数](src/11_save_restore_weights.py)
