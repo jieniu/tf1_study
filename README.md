@@ -14,3 +14,4 @@ tensorflow1.x study code
 9. [使用dropout来控制模型的过拟合](src/09_dropout.py)
 10. [使用cnn来做手写数字识别分类](src/10_cnn_mnist.py)
 11. [保存和恢复参数](src/11_save_restore_weights.py)
+12. [将cnn网络结构和统计信息输出到tensorboard](src/12_cnn_and_tensorboard.py)
