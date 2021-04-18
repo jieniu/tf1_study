@@ -18,3 +18,4 @@ tensorflow1.x study code
 13. [使用lstm来做手写数字识别任务](src/13_lstm_mnist.py)
 14. [保存和恢复模型](src/14_save_model.py)
 15. [加载inception模型](src/15_load_inception.py)
+16. [使用inception进行预测](src/16_inception_prediction.py)
