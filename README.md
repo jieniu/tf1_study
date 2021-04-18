@@ -17,3 +17,4 @@ tensorflow1.x study code
 12. [将cnn网络结构和统计信息输出到tensorboard](src/12_cnn_and_tensorboard.py)
 13. [使用lstm来做手写数字识别任务](src/13_lstm_mnist.py)
 14. [保存和恢复模型](src/14_save_model.py)
+15. [加载inception模型](src/15_load_inception.py)
