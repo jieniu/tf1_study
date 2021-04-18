@@ -24,9 +24,14 @@ def RNN(X, weights, biases):
 
     lstm_cell = tf.contrib.rnn.BasicLSTMCell(n_hidden_units)
     # outputs记录的是序列中每一个step的结果
+    # outputs[batch_size, max_time, cell.output_size]
+    #   max_time: 序列的长度, =1表示第一次结果, 以此类推
+    #   cell.output_size: 隐藏层单元个数
     # final_state记录的是序列中最后一次的结果
-    # final_state[0]是cell state
-    # final_state[1]是hidden_state
+    # final_state[state, batch_size, cell.state_size]
+    # final_state[0]是cell state: 中间信号
+    # final_state[1]是hidden_state: 最后的输出信号
+    #   cell.state_size 为隐藏单元的个数
     outputs, final_state = tf.nn.dynamic_rnn(lstm_cell, X_in, dtype=tf.float32)
     results = tf.nn.softmax(tf.matmul(final_state[1], weights) + biases)
 
