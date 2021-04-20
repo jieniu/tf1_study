@@ -19,3 +19,4 @@ tensorflow1.x study code
 14. [保存和恢复模型](src/14_save_model.py)
 15. [加载inception模型](src/15_load_inception.py)
 16. [使用inception进行预测](src/16_inception_prediction.py)
+17. [使用自己的分类数据微调inception](src/17_finetuned_inception_prediction.py)
